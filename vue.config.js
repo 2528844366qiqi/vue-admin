@@ -24,14 +24,14 @@ module.exports = {
       // })
   },
   configureWebpack: (config) => {
-    // config.resolve = { // 配置解析别名
-    //   extensions: ['.js', '.json', '.vue'],  // 自动添加文件名后缀
-    //   alias: {
-    //     'vue': 'vue/dist/vue.js',
-    //     '@': path.resolve(__dirname, './src'),
-    //     '@c': path.resolve(__dirname, './src/components')
-    //   }
-    // }
+    config.resolve = { // 配置解析别名
+      extensions: ['.js', '.json', '.vue'],  // 自动添加文件名后缀
+      alias: {
+        'vue': 'vue/dist/vue.js',
+        '@': path.resolve(__dirname, './src'),
+        '@c': path.resolve(__dirname, './src/components')
+      }
+    }
   },
   // 生产环境是否生成 sourceMap 文件
   productionSourceMap: false,
